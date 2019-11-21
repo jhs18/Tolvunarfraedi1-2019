@@ -8,51 +8,68 @@ import java.awt.Color;
  * þannig að það lesi inn níu tölur, þ.e. 3 tölur í línu þar sem hver lína táknar lit. Teiknið
  * Tölvunarfræði 1 Haust 2019
  * svo sex Albers ferninga sem hafa stóra ferninginn í hverjum lit og litla ferninginn í
- * öðrum lit.
+ * öðrum lit. Notið fylki og lykkjur sem mest.
+ *
+ *
  *****************************************************************************/
+
 public class AlbersFerningar {
     public static void main(String[] args) {
-        int[][] arr = StdArrayIO.readInt2D();
-        //Litir
-        Color c1 = new Color(arr[0][0], arr[0][1], arr[0][2]);
-        Color c2 = new Color(arr[1][0], arr[1][1], arr[1][2]);
-        Color c3 = new Color(arr[2][0], arr[2][1], arr[2][2]);
-        //Staðsetning
-        double a = 0.12;
-        // Stærð, stór er 1 og lítill er 2
-        double s1 = 0.05;
-        double s2 = 0.025;
-        //Hæð
-        double h = 0.5;
-        StdDraw.setCanvasSize(500, 500);
-        //Stórir kassar
-        for (double i = a; i < a * 3; i += a) {
-            StdDraw.setPenColor(c1);
-            StdDraw.filledSquare(i, h, s1);
-            StdDraw.setPenColor(c2);
-        }
-        for (double i = a * 3; i < a * 5; i += a) {
-            StdDraw.setPenColor(c2);
-            StdDraw.filledSquare(i, h, s1);
-        }
-        for (double i = a * 5; i < a * 7; i += a) {
-            StdDraw.setPenColor(c3);
-            StdDraw.filledSquare(i, h, s1);
-        }
-        //Litlir kassar
-        for (double i = a * 2; i < a * 4; i += a) {
-            StdDraw.setPenColor(c3);
-            StdDraw.filledSquare(i, h, s2);
-            StdDraw.setPenColor(c2);
-        }
-        for (double i = a * 4; i < a * 6; i += a) {
-            StdDraw.setPenColor(c1);
-            StdDraw.filledSquare(i, h, s2);
-        }
-        for (double i = a; i < a * 7; i += a * 5) {
-            StdDraw.setPenColor(c2);
-            StdDraw.filledSquare(i, h, s2);
-        }
+        int[][] litir = StdArrayIO.readInt2D();
+
+
+        // rauður
+        int[] r1 = litir[0];
+        int[] g1 = litir[1];
+        int[] b1 = litir[2];
+        Color c1 = new Color(litir[0], litir[1], litir[2]);
+        //Blár
+        int r2 = Integer.parseInt(litir[3]);
+        int g2 = Integer.parseInt(litir[4]);
+        int b2 = Integer.parseInt(litir[5]);
+        Color c2 = new Color(r2, g2, b2);
+
+        // Græn
+        int r3 = Integer.parseInt(args[6]);
+        int g3 = Integer.parseInt(args[7]);
+        int b3 = Integer.parseInt(args[8]);
+        Color c3 = new Color(r3, g3, b3);
+
+        // first Albers square
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(0.12, 0.5, 0.05);
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(0.12, 0.5, 0.025);
+
+        // second Albers square
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(0.24, 0.5, 0.05);
+        StdDraw.setPenColor(c3);
+        StdDraw.filledSquare(0.24, 0.5, 0.025);
+
+        // third Albers square
+        StdDraw.setPenColor(c3);
+        StdDraw.filledSquare(0.36, 0.5, 0.05);
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(0.36, 0.5, 0.025);
+
+        // fourth Albers square
+        StdDraw.setPenColor(c3);
+        StdDraw.filledSquare(0.48, 0.5, 0.05);
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(0.48, 0.5, 0.025);
+
+        // fifth Albers square
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(0.60, 0.5, 0.05);
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(0.60, 0.5, 0.025);
+
+        // sixth Albers square
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(0.72, 0.5, 0.05);
+        StdDraw.setPenColor(c3);
+        StdDraw.filledSquare(0.72, 0.5, 0.025);
+
     }
 }
-

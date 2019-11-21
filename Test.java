@@ -2,29 +2,22 @@
  *  Nafn    : Jónas Helgi Sverrisson
  *  T-póstur: jhs18@hi.is
  *
- *  Lýsing  : Skrifið klasann AlbersFerningar með því að breyta AlbersSquares forritinu
- * þannig að það lesi inn níu tölur, þ.e. 3 tölur í línu þar sem hver lína táknar lit. Teiknið
- * Tölvunarfræði 1 Haust 2019
- * svo sex Albers ferninga sem hafa stóra ferninginn í hverjum lit og litla ferninginn í
- * öðrum lit.
+ *  Lýsing  :
+ *
+ *
  *****************************************************************************/
+
 public class Test {
-    private final long start;
+    static int leggjaSamanHornalinu(int[] r, int[] b, int[] g) {
 
-    public Test() {
-        start = System.currentTimeMillis();
+        for (int i = 0; i < a.length; i++) {
+            hornalina += a[i][i];
+        }
+        return int[] r, b, g;
     }
 
-    public double elapsedTime() {
-        long now = System.currentTimeMillis();
-        return (now - start) / 1000.0;
-    }
-
-    public static void main(String[] args) {
-        Stopwatch klukka = new Stopwatch();
-        double timi = klukka.elapsedTime();
-        StdOut.println(timi);
+    static public void main(String[] args) {
+        int fylki[][] = StdArrayIO.readInt2D();
+        System.out.println("Útkoman er: " + leggjaSamanHornalinu(fylki));
     }
 }
-
-

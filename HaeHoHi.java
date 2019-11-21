@@ -7,11 +7,7 @@
  * "Hæ", ef 5 gengur uppí töluna þá prentast "Hó" og ef 7 gengur uppí töluna þá
  * prentast út "Hí". Ef bæði 3 og 5 ganga uppí töluna þá prentast út "HæHó", ef 3 og 7
  * ganga uppí hana þá kemur "HæHí", o.s.frv. Ef allar þrjár tölurnar ganga uppí töluna
- * þá kemur "HæHóHí". Hér fyrir neðan eru tvær fyrstu línurnar í úttakinu eins og það á
- * að vera:
- *  1, 2, Hæ, 4, Hó, Hæ, Hí, 8, Hæ, Hó, 11, Hæ
- *  13, Hí, HæHó, 16, 17, Hæ, 19, Hó, HæHí, 22, 23, Hæ
- *  Sýnið forritskóða og skjáskot af úttaki úr keyrslu forritsins.
+ * þá kemur "HæHóHí".
  *
  *
  *****************************************************************************/
@@ -49,3 +45,4 @@ public class HaeHoHi {
         }
     }
 }
+

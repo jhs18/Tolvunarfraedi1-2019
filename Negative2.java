@@ -7,20 +7,18 @@
  *
  *****************************************************************************/
 
-public class ThrirIRod {
+public class Negative2 {
     public static void main(String[] args) {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
-        int c = Integer.parseInt(args[2]);
-        System.out.print("Tölurnar eru: " + a + " " + b + " " + c);
-        if (a < b && b < c) {
-            System.out.println(" True");
+        if ((a < 0) && (b < 0)) {
+            System.out.println("Báðar neikvæðar");
         }
-        else if (c < b && b < a) {
-            System.out.println(" True");
+        else if (((a < 0) && (b >= 0)) || ((a >= 0) && (b < 0))) {
+            System.out.println("Önnur neikvæð");
         }
         else {
-            System.out.println(" False");
+            System.out.println("Hvorugar neikvæðar");
         }
     }
 }
